@@ -15,8 +15,18 @@ function add(){
     console.log(text);
 
     let list = document.getElementById("list");
-    list.innerHTML += `<li>${text}</li>`;
+    list.innerHTML += `<li>${list}</li>`;
 
 document.getElementById("text").value = "";
+
 }
+add()
+
+document.write(document.getElementById("title").innerHTML = "I hope this works");
+
+
+
+
+
+
 
