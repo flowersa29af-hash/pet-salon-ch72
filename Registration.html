@@ -3,45 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration</title>
-    <!-- Link your external CSS file here -->
+    <title>Pet Registration</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">Pet Salon</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link"  href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Registration.html">Registration</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Services.html">Services</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-    <H1>Registration Page</H1>
-    <section>
-        <h2>Registered Pets</h2>
-        <div>
-          <ol id="list">
-              <li></li>
-            
-          </ol>
+    <main class="registration-page">
+        <section class="container py-5">
+            <h1 class="registration-title text-center mb-4">Pet Registration</h1>
+            <form class="registration-form mx-auto col-12 col-md-8 col-lg-4 p-4 border rounded shadow">
+                <div class="mb-3">
+                    <label class="form-label" for="nameValue">Pet name</label>
+                    <input class="form-control border border-dark" type="text" id="nameValue">
+                </div>
 
-        </div>
-    </section>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script> 
-<script src="./scripts/registration.js"></script>
-    
+                <div class="mb-3">
+                    <label class="form-label" for="ageValue">Age</label>
+                    <input class="form-control border border-dark" type="number" id="ageValue" placeholder="">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="genderValue">Select male or female</label>
+                    <select class="form-select" id="genderValue">
+                        <option value=""></option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="serviceValue">Service</label>
+                    <input class="form-control border border-dark" type="text" id="serviceValue" placeholder="">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="typeValue">Type</label>
+                    <input class="form-control border border-dark" type="text" id="typeValue" placeholder="Dog or cat">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="breedValue">Breed</label>
+                    <input class="form-control border border-dark" type="text" id="breedValue">
+                </div>
+
+                <div class="d-flex gap-2">
+                    <button onclick="register(event)" class="btn btn-primary" type="submit">Register</button>
+                    <button class="btn btn-secondary" type="reset">Reset</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="container pb-5">
+            <h2 class="registration-title text-center">Registered Pets</h2>
+            
+            <div class="mx-auto col-12 col-md-8 col-lg-5">
+                <div class="table-responsive">
+                    <table class="table mt-4">
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Service</th>
+                        <th>Type</th>
+                        <th>Breed</th>
+                        <th>Delete</th>
+                    </tr>
+                 <tbody id="body">
+                    <tr>
+                        <td>Willow</td>
+                        <td>1</td>
+                        <td>Male</td>
+                        <td>Grooming</td>
+                        <td>Cat</td>
+                        <td>Mixed</td>                                      
+                        <td><button class="btn btn-danger delete-btn" type="button">Delete</button></td>
+                    </tr>
+                 </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+    <script src="./scripts/registration.js"></script>
 </body>
-</html>

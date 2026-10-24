@@ -1,67 +1,95 @@
 let pet1 = {
-    Name:   "Willow",
-    Age:        1,
+    Name: "Willow",
+    Age: 1,
     Gender: "Male",
     Service: "Bath",
-    Type:   "Cat",
-    Breed:  "Domestic Shorthair"
+    Type: "Cat",
+    Breed: "Domestic Shorthair"
 };
-console.log(pet1.Name)
+console.log(pet1.Name);
 
 let pet2 = {
-    Name: "Cole" , 
-    Age:    12,
+    Name: "Cole",
+    Age: 12,
     Gender: "Male",
-    Service:  "Hair grooming",
-    Type:   "Dog",
-    Breed:  "Miniature Schnauzer"
+    Service: "Hair grooming",
+    Type: "Dog",
+    Breed: "Miniature Schnauzer"
 };
-console.log(pet2.Name)
+console.log(pet2.Name);
 
 let pet3 = {
-    Name:   "Harry",
-    Age:    4,
+    Name: "Harry",
+    Age: 4,
     Gender: "Male",
     Service: "Vaccination",
     Type: "Cat",
-    Breed: "Orange Cat" 
+    Breed: "Orange Cat"
 };
 
 console.log(pet3.Name);
 
-function displayPets(){
-  let  list = document.getElementById("list");
-    list.innerHTML = `<li>${pet1.Name}</li>
-    <li>${pet2.Name}</li><li>${pet3.Name}</li>`;
+function register(event) {
+    event.preventDefault();
+// create the object object construtor
+    const newPetReg = new PetRegistration(
+        document.getElementById("nameValue").value,
+        document.getElementById("ageValue").value,
+        document.getElementById("genderValue").value,
+        document.getElementById("serviceValue").value,
+        document.getElementById("typeValue").value,
+        document.getElementById("breedValue").value
+    );
+
+   // console.log(newPetReg);
+
+// display pet table
+    const row = document.createElement("tr");
+    const body = document.getElementById("body");
+    const petDetails = [
+        newPetReg.Name,
+        newPetReg.Age,
+        newPetReg.Gender,
+        newPetReg.Service,
+        newPetReg.Type,
+        newPetReg.Breed
+    ];
+
+    petDetails.forEach(function(detail) {
+        const cell = document.createElement("td");
+        cell.textContent = detail;
+        row.appendChild(cell);
+    });
+
+    const deleteCell = document.createElement("td");
+    const deleteButton = document.createElement("button");
+    deleteButton.type = "button";
+    deleteButton.className = "btn btn-danger delete-btn";
+    deleteButton.textContent = "Delete";
+    deleteCell.appendChild(deleteButton);
+    row.appendChild(deleteCell);
+    body.appendChild(row);
+
+    // clear the input field
+    document.getElementById("nameValue").value = "";
+    document.getElementById("ageValue").value = "";
+    document.getElementById("genderValue").value = "";
+    document.getElementById("serviceValue").value = "";
+    document.getElementById("typeValue").value = "";
+    document.getElementById("breedValue").value = "";
 }
-displayPets();
 
+document.getElementById("body").addEventListener("click", function(event) {
+    if (event.target.classList.contains("delete-btn")) {
+        event.target.closest("tr").remove();
+    }
+});
 
-function RegisterUser(NameValue, AgeValue, GenderValue,
-                     ServiceValue, TypeValue, BreedValue){
-
-            this.Name = NameValue;
-            this.Age = AgeValue;
-            this.Gender = GenderValue;
-            this.Service = ServiceValue
-            this.Type = TypeValue;
-            this.Breed = BreedValue;
+function PetRegistration(name, age, gender, service, type, breed) {
+    this.Name = name;
+    this.Age = age;
+    this.Gender = gender;
+    this.Service = service;
+    this.Type = type;
+    this.Breed = breed;
 }
-
-let pet4 = new RegisterUser("Willow", 1, "male", "grooming", "cat", "mixed")
-            console.log(`${pet4.Name} \n ${pet4.Age} \n ${pet4.Gender}\n ${pet4.Service} \n ${pet4.Type} \n ${pet4.Breed}`);
-
-
-               
-let pet5 = new RegisterUser("Cole", "15", "male", "grooming", "Dog", "Miniature Schnauzer")
-            console.log(`${pet5.Name}\n ${pet4.Age}\n ${pet4.Gender}\n ${pet4.Service} \n ${pet4.Type} \n ${pet4.Breed}`);
-
-
-
-let pet6 = new RegisterUser("Harry", "4", "male", "grooming", "cat", "Orange Cat")
-            console.log(`${pet6.Name}\n ${pet4.Age}\n ${pet4.Gender}\n ${pet4.Service}\n${pet4.Type}\n ${pet4.Breed}`);
-
-
-
- 
-
