@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <main class="registration-page">
+        <section class="container py-5">
+            <h1 class="registration-title text-center mb-4">Pet Registration</h1>
+            <form class="registration-form mx-auto col-12 col-md-8 col-lg-4 p-4 border rounded shadow">
+                <div class="mb-3">
+                    <label class="form-label" for="nameValue">Pet name</label>
+                    <input class="form-control border border-dark" type="text" id="nameValue">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="ageValue">Age</label>
+                    <input class="form-control border border-dark" type="number" id="ageValue" placeholder="">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="genderValue">Select male or female</label>
+                    <select class="form-select" id="genderValue">
+                        <option value=""></option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="serviceValue">Service</label>
+                    <input class="form-control border border-dark" type="text" id="serviceValue" placeholder="">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="typeValue">Type</label>
+                    <input class="form-control border border-dark" type="text" id="typeValue" placeholder="Dog or cat">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="breedValue">Breed</label>
+                    <input class="form-control border border-dark" type="text" id="breedValue">
+                </div>
+
+                <div class="d-flex gap-2">
+                    <button onclick="register(event)" class="btn btn-primary" type="submit">Register</button>
+                    <button class="btn btn-secondary" type="reset">Reset</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="container pb-5">
+            <h2 class="registration-title text-center">Registered Pets</h2>
+            
+            <div class="mx-auto col-12 col-md-8 col-lg-5">
+                <div class="table-responsive">
+                    <table class="table mt-4">
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Service</th>
+                        <th>Type</th>
+                        <th>Breed</th>
+                        <th>Delete</th>
+                    </tr>
+                 <tbody id="body">
+                    <tr>
+                        <td>Willow</td>
+                        <td>1</td>
+                        <td>Male</td>
+                        <td>Grooming</td>
+                        <td>Cat</td>
+                        <td>Mixed</td>                                      
+                        <td><button class="btn btn-danger delete-btn" type="button">Delete</button></td>
+                    </tr>
+                 </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+    <script src="./scripts/registration.js"></script>
+</body>

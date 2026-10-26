@@ -1,0 +1,26 @@
+my-class{
+    color: blue;
+    border: 1px solid blue;
+    padding: 20px;
+}
+
+.registration-page {
+    min-height: 100vh;
+    background-color: #5b514a;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+        url("../images/threedogs.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.registration-title {
+    color: white;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.registration-form {
+    max-width: 42rem;
+    background-color: rgba(255, 255, 255, 0.94);
+}
