@@ -1,6 +1,5 @@
 $("#registerService").click(function(event){
     event.preventDefault();
-
   //  alert("clicked")
     // 1.Get the values .val()
 // get the input fields values using Jquery $()
