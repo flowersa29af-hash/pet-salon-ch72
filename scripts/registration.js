@@ -1,4 +1,4 @@
-let pet1 = {
+/*let pet1 = {
     Name: "Willow",
     Age: 1,
     Gender: "Male",
@@ -31,7 +31,7 @@ console.log(pet3.Name);
 
 function register(event) {
     event.preventDefault();
-// create the object object construtor
+// create the object  construtor
     const newPetReg = new PetRegistration(
         document.getElementById("nameValue").value,
         document.getElementById("ageValue").value,
@@ -42,6 +42,7 @@ function register(event) {
     );
 
    // console.log(newPetReg);
+
 
 // display pet table
     const row = document.createElement("tr");
@@ -92,4 +93,15 @@ function PetRegistration(name, age, gender, service, type, breed) {
     this.Service = service;
     this.Type = type;
     this.Breed = breed;
-}
+} */
+
+
+
+$("registerSevice").click(function(){
+    alert("click");
+    let serviceName = $("")
+
+
+}) 
+
+

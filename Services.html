@@ -7,12 +7,12 @@
     <title>Services</title>  
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">Pet Salon</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+     <a class="navbar-brand" href="index.html">Pet Salon</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
@@ -32,33 +32,34 @@
 
      <div class="row justify-content-center">
           <h1 class="text-center">Services</h1>
-               <form class="col-12 col-md-8 col-lg-6 bg-info-subtle p-4 border rounded mt-4  w-25" >
+               <form id="serviceForm" class="col-12 col-md-8 col-lg-6 bg-info-subtle p-4 border rounded mt-4  w-25" >
                    
               
               <div class="mb-3">
                   <label class="form-label ">Service</label>
-                  <input class="form-control border border-dark" type="number" id="" placeholder="12">
-                </div>
+                  <input id="serviceName" class="form-control" type="text" placeholder="">
+              </div>
 
               <div class="mb-3">
                   <label class="form-label">Description</label>
-                  <input class="form-control border border-dark" type="text" id="" aria-placeholder="Apple">
+                  <input id="serviceDesc" class="form-control" type="text" aria-placeholder="Apple">
               </div>
               
               <div class="mb-3">
                   <label class="form-label ">Price</label>
-                  <input class="form-control border border-dark" type="mumber" id="" placeholder="12">
+                  <input id="servicePrice" class="form-control" type="number" placeholder="12">
                 </div>
               <div class="gap-2">
-                  <button    class="btn btn-primary"  type="submit">Register</button>
+                  <button id="registerService"   class="btn btn-primary"  type="submit">Register</button>
                   <button class="btn btn-secondary"   type="reset">Reset</button>
                 </div>
 
                </form>
      </div>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>  
+ <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script> 
 
-    
+ <script src="./scripts/services.js"></script>
 
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>   
 </body>
 </html>
