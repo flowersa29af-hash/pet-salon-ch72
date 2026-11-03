@@ -27,7 +27,7 @@ body{
 
 .image-container{
     width: 20%;
-    border: solid 2px red;
+  /* border: solid 2px red; */
 }
 
 .image-container img {
@@ -47,7 +47,7 @@ section{
     height: 100vh;
     justify-content: space-evenly;
     text-align: center;
-    border: solid 2px red;
+  /* border: solid 2px red; */
 
 }
 
@@ -82,7 +82,7 @@ button:hover, a:hover{
     background-color: var(--surface-color);
     padding: 10px 30px;
     border-radius: 20px;
-    border: solid 2px var(--accent-color);
+   /* border: solid 2px var(--accent-color); */
 }
 
 
