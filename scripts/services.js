@@ -1,38 +1,25 @@
-$("#registerService").click(function(event){
+$("#serviceForm").on("submit", function(event) {
     event.preventDefault();
-  //  alert("clicked")
-    // 1.Get the values .val()
-// get the input fields values using Jquery $()
 
-let serviceName = $("#serviceName").val().trim();
-let serviceDesc = $("#serviceDesc").val().trim();
-let servicePrice = $("#servicePrice").val();
-// alert(`${serviceName} - ${serviceDesc} - ${servicePrice}`);
+    const serviceName = $("#serviceName").val().trim();
+    const serviceDesc = $("#serviceDesc").val().trim();
+    const servicePrice = Number($("#servicePrice").val());
 
-if(serviceName == ""){
-    $("#serviceName").css("border", "1px solid red");
-} else if (#serviceDesc == ""){
-    $("#serviceDesc").css("border", "1px solid red");
-} else if (#servicePrice == ""){
-   $("#servicePrice").css("border", "1px solid red");
-} else{
-    // save to local storage assignment 3
+    if (!serviceName || !serviceDesc || !Number.isFinite(servicePrice) || servicePrice <= 0) {
+        alert("Enter a service name, description, and a price greater than zero.");
+        return;
+    }
 
-    // Remove the red border
-S  $("#serviceName").css("border", "");
-   $("#serviceDesc").css("border", "");
-   $("#servicePrice").css("border", "");
+    localStorage.setItem("serviceName", serviceName);
+    localStorage.setItem("serviceDesc", serviceDesc);
+    localStorage.setItem("servicePrice", String(servicePrice));
 
-   //clear input fields
-   $("#serviceName").val("");
-   $("#serviceDesc").val("");
-   $("#servicePrice").val("");
-}
-
-
-
-
-
-
-
+    this.reset();
 });
+
+
+
+
+
+
+
