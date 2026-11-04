@@ -35,6 +35,12 @@ $("#petForm").on("submit", function(event) {
 
     // create the object from the form values
     const values = fieldIds.map(id => $(id).val().trim());
+    const [name, age, , service, type] = values;
+
+    if (!name || age === "" || !service || !type) {
+        alert("Enter the pet's name, age, type and service.");
+        return;
+    }
     const newPetReg = new PetRegistration(...values);
 
     // add a row to the pet table
