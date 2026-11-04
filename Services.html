@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
     <script src="scripts/theme.js"></script>
     <title>Services</title>  
 </head>
@@ -17,7 +18,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link"  href="index.html">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="Registration.html">Registration</a>
@@ -33,7 +34,17 @@
     <main class="container py-5">
       <div class="row justify-content-center">
         <div class="col-12 col-md-8 col-lg-6">
-          <h1 class="text-center mb-4">Pet Salon Services</h1>
+          <h1 class="services-title text-center mb-4">Pet Salon Services</h1>
+
+          <div class="row g-3 mb-4">
+            <div class="col-6">
+              <img class="service-photo" src="images/grooming.jpg" alt="Poodle being groomed with clippers">
+            </div>
+            <div class="col-6">
+              <img class="service-photo" src="images/scissoring.webp" alt="Poodle getting a scissor trim">
+            </div>
+          </div>
+
 
           <form id="serviceForm" class="card shadow-sm border-0 p-4">
             <div class="mb-3">
@@ -63,6 +74,10 @@
               </button>
             </div>
           </form>
+
+          <h2 class="services-title h4 mt-5 mb-3">Our Services</h2>
+          <p id="noServices" class="text-body-secondary">No services yet. Add one with the form above.</p>
+          <ul id="serviceList" class="list-group shadow-sm"></ul>
         </div>
       </div>
     </main>
