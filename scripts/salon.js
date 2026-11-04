@@ -12,9 +12,14 @@ const salon = {
     }
 }
 
+function formatPhone(number) {
+    const digits = String(number);
+    return "(" + digits.slice(0, 3) + ") " + digits.slice(3, 6) + "-" + digits.slice(6);
+}
+
 function displaySalon() {
     document.getElementById("p").innerHTML =
-        salon.name + " | Hours: " + salon.hour + " | Phone: " + salon.phone +
+        salon.name + " | Hours: " + salon.hour + " | Phone: " + formatPhone(salon.phone) +
         " | Address: " + salon.address.street + ", " + salon.address.city +
         ", " + salon.address.state;
 }
