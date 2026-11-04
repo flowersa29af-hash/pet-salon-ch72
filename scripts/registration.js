@@ -1,4 +1,4 @@
-let pet1 = {
+/*let pet1 = {
     Name: "Willow",
     Age: 1,
     Gender: "Male",
@@ -93,4 +93,15 @@ function PetRegistration(name, age, gender, service, type, breed) {
     this.Service = service;
     this.Type = type;
     this.Breed = breed;
-}
+} */
+
+
+
+$("registerSevice").click(function(){
+    alert("click");
+    let serviceName = $("")
+
+
+}) 
+
+

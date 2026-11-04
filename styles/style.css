@@ -24,3 +24,12 @@ my-class{
     max-width: 42rem;
     background-color: rgba(255, 255, 255, 0.94);
 }
+/* ---------- Dark mode ---------- */
+[data-bs-theme="dark"] .registration-form {
+    background-color: rgba(33, 37, 41, 0.94);
+}
+
+/* "border-dark" inputs would vanish on a dark background */
+[data-bs-theme="dark"] .registration-form .border-dark {
+    border-color: var(--bs-border-color) !important;
+}
