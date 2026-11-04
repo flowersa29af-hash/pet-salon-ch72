@@ -11,7 +11,7 @@
     <main class="registration-page">
         <section class="container py-5">
             <h1 class="registration-title text-center mb-4">Pet Registration</h1>
-            <form class="registration-form mx-auto col-12 col-md-8 col-lg-4 p-4 border rounded shadow">
+            <form id="petForm" class="registration-form mx-auto col-12 col-md-8 col-lg-4 p-4 border rounded shadow">
                 <div class="mb-3">
                     <label class="form-label" for="nameValue">Pet name</label>
                     <input class="form-control border border-dark" type="text" id="nameValue">
@@ -47,7 +47,7 @@
                 </div>
 
                 <div class="d-flex gap-2">
-                    <button onclick="register(event)" class="btn btn-primary" type="submit">Register</button>
+                    <button class="btn btn-primary" type="submit">Register</button>
                     <button class="btn btn-secondary" type="reset">Reset</button>
                 </div>
             </form>
@@ -85,5 +85,6 @@
         </section>
 
     </main>
+    <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
     <script src="./scripts/registration.js"></script>
 </body>
