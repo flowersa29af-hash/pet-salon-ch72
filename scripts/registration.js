@@ -56,6 +56,13 @@ let pets = loadPets();
 function displayPets() {
     const body = $("#body").empty();
 
+    if (pets.length === 0) {
+        body.append($("<tr>").append(
+            $("<td>", { colspan: 7, "class": "text-center text-body-secondary py-3", text: "No pets registered yet." })
+        ));
+        return;
+    }
+
     pets.forEach(function(pet, index) {
         const row = $("<tr>");
         [pet.Name, pet.Age, pet.Gender, pet.Service, pet.Type, pet.Breed].forEach(function(detail) {
