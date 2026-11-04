@@ -9,6 +9,25 @@ function PetRegistration(name, age, gender, service, type, breed) {
     this.Breed = breed;
 }
 
+// fill the Service dropdown from the services saved on the Services page
+function loadServiceOptions() {
+    let services = [];
+    try {
+        services = JSON.parse(localStorage.getItem("services")) || [];
+    } catch (error) {
+        services = [];
+    }
+
+    services.forEach(function(service) {
+        $("#serviceValue").append(
+            $("<option>", { value: service.name, text: service.name + " ($" + Number(service.price).toFixed(2) + ")" })
+        );
+    });
+    $("#noServicesHint").toggle(services.length === 0);
+}
+
+loadServiceOptions();
+
 const fieldIds = ["#nameValue", "#ageValue", "#genderValue", "#serviceValue", "#typeValue", "#breedValue"];
 
 $("#petForm").on("submit", function(event) {
