@@ -1,12 +1,63 @@
-my-class{
+/* ===== Shared site colors ===== */
+:root {
+    --salon-brown: #5b514a;
+    --salon-accent: #c8794b;
+    --salon-cream: #faf6f1;
+}
+
+body {
+    background-color: var(--salon-cream);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--salon-accent);
+}
+
+/* Used by the "Apply CSS class" demo in 105-jquery-intro */
+.my-class {
     color: blue;
     border: 1px solid blue;
     padding: 20px;
 }
 
+/* ===== Home page ===== */
+.hero {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 3rem 1rem;
+    text-align: center;
+    color: white;
+    background-color: var(--salon-brown);
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("../images/threedogs.webp");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1 {
+    font-weight: 700;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.salon-info {
+    max-width: 42rem;
+    margin: 0;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    color: var(--salon-brown);
+    background-color: rgba(255, 255, 255, 0.94);
+}
+
+/* ===== Registration page ===== */
 .registration-page {
     min-height: 100vh;
-    background-color: #5b514a;
+    background-color: var(--salon-brown);
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
         url("../images/threedogs.webp");
@@ -23,4 +74,9 @@ my-class{
 .registration-form {
     max-width: 42rem;
     background-color: rgba(255, 255, 255, 0.94);
+}
+
+/* ===== Services page ===== */
+.services-title {
+    color: var(--salon-brown);
 }
