@@ -35,12 +35,12 @@
             <form id="petForm" class="registration-form mx-auto col-12 col-md-8 col-lg-4 p-4 border rounded shadow">
                 <div class="mb-3">
                     <label class="form-label" for="nameValue">Pet name</label>
-                    <input class="form-control border border-dark" type="text" id="nameValue">
+                    <input class="form-control border border-dark" type="text" id="nameValue" required>
                 </div>
 
                 <div class="mb-3">
                     <label class="form-label" for="ageValue">Age</label>
-                    <input class="form-control border border-dark" type="number" id="ageValue" placeholder="">
+                    <input class="form-control border border-dark" type="number" id="ageValue" min="0" required>
                 </div>
 
                 <div class="mb-3">
@@ -54,12 +54,15 @@
 
                 <div class="mb-3">
                     <label class="form-label" for="serviceValue">Service</label>
-                    <input class="form-control border border-dark" type="text" id="serviceValue" placeholder="">
+                    <select class="form-select border border-dark" id="serviceValue" required>
+                        <option value="">Choose a service</option>
+                    </select>
+                    <div id="noServicesHint" class="form-text">No services yet. <a href="Services.html">Add services</a> first.</div>
                 </div>
 
                 <div class="mb-3">
                     <label class="form-label" for="typeValue">Type</label>
-                    <input class="form-control border border-dark" type="text" id="typeValue" placeholder="Dog or cat">
+                    <input class="form-control border border-dark" type="text" id="typeValue" placeholder="Dog or cat" required>
                 </div>
 
                 <div class="mb-3">
